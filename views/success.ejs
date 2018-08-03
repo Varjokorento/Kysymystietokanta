@@ -1,0 +1,21 @@
+<head>
+    <%- include('header.ejs') %>
+</head>
+
+<div class="container">
+    <p> </p>
+    <p> </p>
+    <h2>Kiitos yhteistyöstä! </h2>
+    <p><b>Kysymyksesi genre oli: </b></br> <%= questionGenre%></p>
+    <p><b>Kysymyksesi oli</b>: <br> <%- questionText%></p>
+    <p></p>
+    <button onclick="location.href = '/'" type="button" class="btn btn-primary btn-lg btn-block" >Palaa etusivulle</button>
+    <button onclick="location.href = '/allquestions'" type="button"  class="btn btn-primary btn-lg btn-block" >Katso kaikki kysymykset kannasta</button>
+    <p> </p>
+    <p> </p>
+</div>
+
+
+<footer>
+    <%- include('footer.ejs') %>
+</footer>

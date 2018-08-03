@@ -1,0 +1,60 @@
+<head>
+    <%- include('header.ejs') %>
+</head>
+
+<div class="container">
+    <h2>Rajoita kannassa näytettäviä</h2>
+    <form method="post" action="/allQuestions/parameters">
+    <div class="container">
+        <input type="radio" id="contactChoice1"
+               name="questiongenre" value="MySQL">
+        <label for="contactChoice1">MySQL</label>
+
+        <input type="radio" id="contactChoice1"
+               name="questiongenre" value="Java">
+        <label for="contactChoice1">Java</label>
+        <input type="radio" id="contactChoice1"
+               name="questiongenre" value="JavaScript">
+        <label for="contactChoice1">JavaScript</label>
+        <input type="radio" id="contactChoice1"
+               name="questiongenre" value="NodeJS">
+        <label for="contactChoice1">NodeJS</label>
+        <input type="radio" id="contactChoice1"
+               name="questiongenre" value="SpringBoot">
+        <label for="contactChoice1">SpringBoot</label>
+        <input type="radio" id="contactChoice1"
+               name="questiongenre" value="MongoDB">
+        <label for="contactChoice1">MongoDB</label>
+        <input type="radio" id="contactChoice1"
+               name="questiongenre" value="Yleinen">
+        <label for="contactChoice1">Yleinen</label>
+        <input type="radio" id="contactChoice1"
+               name="questiongenre" value="showall">
+        <label for="contactChoice1">Nayta kaikki</label>
+    </div>
+        <div class="small">
+            <button  class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+        </div>
+    </form>
+
+</div>
+<div class="container">
+
+    <h1> Kaikki tietokannassa olevat kysymykset </h1>
+    <table class="table">
+    <% array.forEach(function(question){ %>
+    <tr>
+        <th>Kysymyksen genre</th>
+        <td><%=question.genre%></td>
+        <th>Kysymyksen teksti</th>
+        <td><%-question.text%></td>
+    </tr>
+    <% }) %>
+    </table>
+    <button onclick="location.href = '/'" type="button" class="btn btn-primary btn-lg btn-block">Palaa etusivulle</button>
+</div>
+
+
+<footer>
+    <%- include('footer.ejs') %>
+</footer>

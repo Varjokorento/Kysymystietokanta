@@ -1,0 +1,43 @@
+<head>
+    <%- include('header.ejs') %>
+</head>
+
+<div class="container">
+
+    <h1> Kaikki tietokannassa olevat kysymykset </h1>
+    <table class="table">
+    <% array.forEach(function(question){ %>
+    <tr>
+        <th>Kysymyksen genre</th>
+        <td><%=question.genre%></td>
+        <th>Kysymyksen teksti</th>
+        <td><%-question.text%></td>
+        <th>Kysymyksen id</th>
+        <td><%= question._id%></td>
+        <td>
+            <form method="post" action="/deletequestions">
+                <button class="id" name="deletedid" value =<%= question._id%>>DELETE</button>
+         </form>
+        </td>
+    </tr>
+    <% }) %>
+    </table>
+    <button onclick="location.href = '/'" type="button" class="btn btn-primary btn-lg btn-block">Palaa etusivulle</button>
+</div>
+
+
+<div class="container">
+    <form method="post" action="/deletequestions">
+        <button onclick="myFunction()" class="btn btn-primary" name ="deletedid" value="all">DELETE ALL</button>
+    </form>
+</div>
+
+<script>
+    function myFunction() {
+        confirm("Are you sure?");
+    }
+</script>
+
+<footer>
+    <%- include('footer.ejs') %>
+</footer>

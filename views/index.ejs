@@ -1,0 +1,52 @@
+<head>
+    <%- include('header.ejs') %>
+</head>
+
+<div class="container">
+    <div class="small">
+    <h1> Kysymyslaatikko </h1>
+    </div>
+    <form method="post" action="/">
+        <div class="form-group" id="genrevalinnat">
+            <label for="genrevalinnat">Kysymyksen genre (Laita yleinen, jos muut eivät mahdu)</label>
+            <br>
+            <input type="radio" id="contactChoice1"
+                   name="questiongenre" value="MySQL">
+            <label for="contactChoice1">MySQL</label>
+
+            <input type="radio" id="contactChoice1"
+                   name="questiongenre" value="Java">
+            <label for="contactChoice1">Java</label>
+
+            <input type="radio" id="contactChoice1"
+                   name="questiongenre" value="JavaScript">
+            <label for="contactChoice1">JavaScript</label>
+            <input type="radio" id="contactChoice1"
+                   name="questiongenre" value="NodeJS">
+            <label for="contactChoice1">NodeJS</label>
+            <input type="radio" id="contactChoice1"
+                   name="questiongenre" value="SpringBoot">
+            <label for="contactChoice1">SpringBoot</label>
+            <input type="radio" id="contactChoice1"
+                   name="questiongenre" value="MongoDB">
+            <label for="contactChoice1">MongoDB</label>
+            <input type="radio" id="contactChoice1"
+                   name="questiongenre" value="Yleinen">
+            <label for="contactChoice1">Yleinen</label>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Kysymyksen teksti</label>
+            <textarea class="form-control" required name="questiontext" id="exampleFormControlTextarea1" rows="6"></textarea>
+        </div>
+        <div class="small">
+            <button  class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+        </div>
+    </form>
+    <button onclick="location.href = '/allquestions'" type="button"  class="btn btn-primary btn-lg btn-block" >Katso kaikki kysymykset kannasta</button>
+    <p>   </p>
+    <button onclick="location.href = '/palaute'" type="button"  class="btn btn-primary btn-lg btn-block" >Kirjoita palautetta ylläpidolle</button>
+</div>
+
+<footer>
+    <%- include('footer.ejs') %>
+</footer>

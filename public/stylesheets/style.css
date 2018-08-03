@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container {
+  border: 1000px black solid;
+  width: 320px;
+  height: 120px;
+}
+
+.small {
+  display: inline-block;
+  width: 40%;
+  height: 30%;
+  border: 1px black solid;
+  background: aliceblue;
+}
+
+.tekstikenttä {
+  width: 100px  !important;;
+  height: 100px  !important;;
+}
