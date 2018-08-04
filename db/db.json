@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id":"2f24vvg",
+      "email": "test@test.com",
+      "password": "$2a$10$XdjAlbbx9DyiDL3lV15U9.W4oTVBA1pPW3M0isFLvw0FrKukKLmtG" 
+    },
+    {
+      "id":"d1u9nq",
+      "email": "user2@example.com",
+      "password": "$2a$10$GZ922rCE5k1eCiBFuJbVqeo5m3vDGFX/XY68LlqQcuTUSoAaI0Fte"
+    },
+    {
+      "id":"d1u9nq",
+      "email": "esimerkki@esimerkki",
+      "password": "$2a$10$cNv0rf1u2XoAVrG0ckMdDuPHo9a0aHRMlGxnVbhRTJFAG5AgrR/QK"
+    }
+  ]
+}

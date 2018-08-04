@@ -4,7 +4,9 @@ var router = express.Router();
 var dbservice = require('./dbservice');
 
 
-router.get('/', function(req, res, next) {
+
+
+router.get('/', function (req, res, next) {
    dbservice.showAll(req, res)
 });
 
@@ -16,5 +18,7 @@ router.post('/parameters', function(req, res, next) {
       dbservice.showAll(req, res)
    }
 });
+
+
 
 module.exports= router;

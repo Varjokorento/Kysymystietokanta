@@ -4,7 +4,8 @@ var router = express.Router();
 var dbservice = require('./dbservice');
 
 
-router.get('/', function(req, res, next) {
+
+router.get('/', function (req, res, next) {
    res.render("palaute")
 });
 
