@@ -7,7 +7,7 @@ var questionText ="Virhe";
 
 
 function addQuestiontotheDatabase(req, res) {
-    return MongoClient.connect('mongodb://localhost:27017/test').then(function(db) {
+    return MongoClient.connect(url, { useNewUrlParser: true }).then(function(db) {
         const dbo =db.db();
         var collection = dbo.collection('question');
         questionGenre = req.body.questiongenre;
@@ -20,7 +20,7 @@ function addQuestiontotheDatabase(req, res) {
 }
 
 function showAll(req, res) {
-    return MongoClient.connect('mongodb://localhost:27017/test').then(function(db) {
+    return MongoClient.connect(url, { useNewUrlParser: true }).then(function(db) {
         const dbo = db.db();
         // grade = req.body.grade;
         var collection = dbo.collection('question');
@@ -34,7 +34,7 @@ function showAll(req, res) {
 
 
 function showAlltoDelete(req, res) {
-    return MongoClient.connect('mongodb://localhost:27017/test').then(function(db) {
+    return MongoClient.connect(url, { useNewUrlParser: true }).then(function(db) {
         const dbo = db.db();
         var collection = dbo.collection('question');
         return collection.find({})
@@ -47,7 +47,7 @@ function showAlltoDelete(req, res) {
 
 function deleteQuestion(req, res) {
     if (req.body.deletedid !== "all") {
-        return MongoClient.connect('mongodb://localhost:27017/test').then(function (db) {
+        return MongoClient.connect(url, { useNewUrlParser: true }).then(function (db) {
             const dbo = db.db();
             var objectToBeDeleted = req.body.deletedid;
             var collection = dbo.collection('question');
@@ -56,7 +56,7 @@ function deleteQuestion(req, res) {
             showAlltoDelete(req, res);
         });
     } else {
-        return MongoClient.connect('mongodb://localhost:27017/test').then(function (db) {
+        return MongoClient.connect(url, { useNewUrlParser: true }).then(function (db) {
             const dbo = db.db();
             var collection = dbo.collection('question');
             return collection.remove({});
@@ -67,7 +67,7 @@ function deleteQuestion(req, res) {
 }
 
 function showAllwithParameters(req, res) {
-    return MongoClient.connect('mongodb://localhost:27017/test').then(function(db) {
+    return MongoClient.connect(url, { useNewUrlParser: true }).then(function(db) {
         const dbo = db.db();
         var collection = dbo.collection('question');
         return collection.find({})
